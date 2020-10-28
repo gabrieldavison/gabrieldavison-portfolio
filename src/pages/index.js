@@ -1,33 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Global, css } from "@emotion/core"
-import emotionNormalize from "emotion-normalize"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import BlogSummary from "../components/blogSummary"
+import ProjectSummary from "../components/projectSummary"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Global
-        styles={css`
-          ${emotionNormalize}
-          html {
-            box-sizing: border-box;
-          }
-          *,
-          *:before,
-          *:after {
-            box-sizing: inherit;
-          }
-        `}
-      />
-
-      <SEO title="Home" />
-      <p>HOME PAGE</p>
+    <Layout>
+      <div>
+        <ProjectSummary />
+        <BlogSummary />
+      </div>
     </Layout>
   )
 }
