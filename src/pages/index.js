@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Global, css } from "@emotion/core"
+import emotionNormalize from "emotion-normalize"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,6 +12,20 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Global
+        styles={css`
+          ${emotionNormalize}
+          html {
+            box-sizing: border-box;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: inherit;
+          }
+        `}
+      />
+
       <SEO title="Home" />
       <p>HOME PAGE</p>
     </Layout>

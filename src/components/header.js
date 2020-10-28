@@ -3,7 +3,9 @@ import React from "react"
 const Header = () => {
   return (
     <header>
-      <p>SITE HEADER</p>
+      <img src="/asciiart.svg" alt="" srcset="" />
+      <div>Web developer and designer.</div>
+      <div>mail [at] gabrieldavison [dot] me [dot] uk</div>
     </header>
   )
 }
