@@ -1,52 +1,48 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import ProjectShort from "./projectShort"
+import { Link } from "gatsby"
+import { Col, SectionHeader } from "../utils/styles"
 
 const ProjectSummary = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "projects" }
-          extension: { eq: "md" }
-        }
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "projects" } } }
+        sort: { fields: frontmatter___order, order: ASC }
       ) {
         nodes {
           id
-          childMarkdownRemark {
-            frontmatter {
-              demo
-              order
-              title
-              description
-            }
+          frontmatter {
+            demo
+            source
+            order
+            title
+            description
           }
         }
       }
     }
   `)
-  const sortedProjects = data.allFile.nodes.sort((a, b) => {
-    return (
-      a.childMarkdownRemark.frontmatter.order -
-      b.childMarkdownRemark.frontmatter.order
-    )
-  })
-  console.log(sortedProjects)
+
+  const projects = data.allMarkdownRemark.nodes
 
   return (
-    <div>
-      {sortedProjects.map(project => {
+    <Col left>
+      <SectionHeader>Recent Projects</SectionHeader>
+      {projects.map(project => {
         return (
           <ProjectShort
             key={project.id}
-            title={project.childMarkdownRemark.frontmatter.title}
-            demo={project.childMarkdownRemark.frontmatter.demo}
-            source={project.childMarkdownRemark.frontmatter.source}
-            description={project.childMarkdownRemark.frontmatter.description}
+            title={project.frontmatter.title}
+            demo={project.frontmatter.demo}
+            source={project.frontmatter.source}
+            description={project.frontmatter.description}
           />
         )
       })}
-    </div>
+      <Link to="/projects">continue to projects...</Link>
+    </Col>
   )
 }
 

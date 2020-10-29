@@ -12,8 +12,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
+          filter: { fields: { collection: { eq: "blog" } } }
+          sort: { fields: frontmatter___date, order: ASC }
         ) {
           nodes {
             id
@@ -61,9 +61,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  //Adds folder name as 'collection' field to blog posts
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const parent = getNode(node.parent)
+    let collection = parent.sourceInstanceName
+    createNodeField({
+      node,
+      name: "collection",
+      value: collection,
+    })
+  }
 
+  //Adds slug to blog posts
+  //
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.fields.collection === "blog"
+  ) {
+    const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,

@@ -1,31 +1,44 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import PostShort from "./postShort"
+import { Col, SectionHeader } from "../utils/styles"
 
 const BlogSummary = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allFile(
-  //       filter: { sourceInstanceName: { eq: "blog" }, extension: { eq: "md" } }
-  //     ) {
-  //       nodes {
-  //         id
-  //         childMarkdownRemark {
-  //           frontmatter {
-  //             demo
-  //             order
-  //             title
-  //             description
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const posts = data.allFile.nodes
-  // console.log(posts)
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "blog" } } }
+        sort: { fields: frontmatter___date, order: ASC }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            date(formatString: "DD/MM/YY")
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `)
+  const posts = data.allMarkdownRemark.nodes
   return (
-    <div>
-      <p>Blog SUMMARY</p>
-    </div>
+    <Col right>
+      <SectionHeader>Blog</SectionHeader>
+      {posts.map(post => {
+        return (
+          <PostShort
+            key={post.id}
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            slug={post.fields.slug}
+          />
+        )
+      })}
+      <Link to="/blog">continue to blog...</Link>
+    </Col>
   )
 }
 

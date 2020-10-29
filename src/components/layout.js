@@ -1,29 +1,25 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import { Global, css } from "@emotion/core"
-import emotionNormalize from "emotion-normalize"
+import Nav from "./nav"
+import { GlobalStyle } from "../utils/styles"
+import styled from "@emotion/styled"
+import { colors } from "../utils/styles"
 
-const Layout = ({ children }) => {
+const MainContainer = styled.main`
+  max-width: 1000px;
+  margin: auto;
+`
+
+const Layout = ({ children, location }) => {
   return (
-    <div>
-      <Global
-        styles={css`
-          ${emotionNormalize}
-          html {
-            box-sizing: border-box;
-          }
-          *,
-          *:before,
-          *:after {
-            box-sizing: inherit;
-          }
-        `}
-      />
+    <MainContainer>
+      <GlobalStyle />
       <Header />
+      {location ? <Nav location={location} /> : null}
       <main>{children}</main>
       <Footer />
-    </div>
+    </MainContainer>
   )
 }
 
