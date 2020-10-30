@@ -4,9 +4,9 @@ import BlogSummary from "../components/blogSummary"
 import ProjectSummary from "../components/projectSummary"
 import { TwoColContainer } from "../utils/styles"
 
-const Index = ({}) => {
+const Index = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <TwoColContainer>
         <ProjectSummary />
         <BlogSummary />

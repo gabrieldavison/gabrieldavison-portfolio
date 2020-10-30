@@ -6,10 +6,18 @@ import { Col } from "../utils/styles"
 const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
+  height: 70px;
+  max-width: 1000px;
+  margin: auto;
 `
+const LeftCol = styled(Col)``
 
 const RightCol = styled(Col)`
   text-align: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-left: 4rem;
 `
 const LinkList = styled.ul`
   padding: 0;
@@ -21,7 +29,7 @@ const LinkList = styled.ul`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Col>
+      <LeftCol>
         <p>Also find me on...</p>
         <LinkList>
           <li>
@@ -34,10 +42,12 @@ const Footer = () => {
             <a>[linkedIn]</a>
           </li>
         </LinkList>
-      </Col>
+      </LeftCol>
 
       <RightCol>
-        <a>this website was made with...</a>
+        <p>
+          <a>this website was made with...</a>
+        </p>
       </RightCol>
     </FooterContainer>
   )

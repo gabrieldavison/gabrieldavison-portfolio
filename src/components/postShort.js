@@ -5,21 +5,28 @@ import { colors } from "../utils/styles"
 
 const PostHeader = styled.h3`
   display: inline;
+`
+const PostWrapper = styled.div`
+  margin-bottom: 2em;
   a {
     color: ${colors.dark};
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `
 
 const PostShort = ({ title, slug, date, description }) => {
   return (
-    <div>
-      <p>
-        {date} -{" "}
-        <PostHeader>
-          <Link to={slug}>{title}</Link>
-        </PostHeader>{" "}
-      </p>
-    </div>
+    <PostWrapper>
+      <Link to={slug}>
+        <p>{date}</p>
+        <p>
+          <PostHeader>{title}</PostHeader>{" "}
+        </p>
+      </Link>
+    </PostWrapper>
   )
 }
 

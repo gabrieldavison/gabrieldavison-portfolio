@@ -29,7 +29,9 @@ const ProjectSummary = () => {
 
   return (
     <Col left>
-      <SectionHeader>Recent Projects</SectionHeader>
+      <SectionHeader>
+        <Link to="/projects">Projects</Link>
+      </SectionHeader>
       {projects.map(project => {
         return (
           <ProjectShort

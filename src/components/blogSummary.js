@@ -26,7 +26,9 @@ const BlogSummary = () => {
   const posts = data.allMarkdownRemark.nodes
   return (
     <Col right>
-      <SectionHeader>Blog</SectionHeader>
+      <SectionHeader>
+        <Link to="/blog">Blog</Link>
+      </SectionHeader>
       {posts.map(post => {
         return (
           <PostShort

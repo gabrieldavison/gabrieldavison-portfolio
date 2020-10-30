@@ -1,9 +1,9 @@
 ---
-title: Project 4
+title: Sound of Life
 demo: ""
 source: ""
 tags: "web,javascript,web audio,music"
 order: 4
 image: "screenshot.png"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit erat, efficitur ac nibh vitae, suscipit."
+description: "A musical sequencer based on Conway's Game of Life that uses the cellular automata to generate sounds."
 ---

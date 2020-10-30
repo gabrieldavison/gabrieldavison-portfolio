@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import emotionNormalize from "emotion-normalize"
+import "fontsource-ibm-plex-mono"
 
 export const colors = {
   light: "#ECEBF1",
@@ -18,8 +19,9 @@ export const GlobalStyle = props => (
       html {
         box-sizing: border-box;
         background-color: ${colors.light};
-        font-family: monospace;
-        font-size: 1em;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: medium;
+        font-size: 0.9em;
       }
       *,
       *:before,
@@ -40,8 +42,8 @@ export const TwoColContainer = styled.div`
 `
 export const Col = styled.section`
   width: 50%;
-  padding-right: ${props => (props.left ? "1.5em" : "0")};
-  padding-left: ${props => (props.right ? "1.5em" : "0")};
+  padding-right: ${props => (props.left ? "2rem" : "0")};
+  padding-left: ${props => (props.right ? "2rem" : "0")};
 `
 export const SectionHeader = styled.h2`
   margin-bottom: 2em;

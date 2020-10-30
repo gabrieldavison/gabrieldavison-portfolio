@@ -1,9 +1,9 @@
 ---
-title: Project 2
+title: SpacetimeJS
 demo: ""
 source: ""
 tags: "web,javascript,web audio,music"
 order: 2
 image: "screenshot.png"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit erat, efficitur ac nibh vitae, suscipit."
+description: "An experimental sequencer the triggers notes based on a set of commands. Sound is generated using Engine."
 ---

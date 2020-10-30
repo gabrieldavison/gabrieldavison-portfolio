@@ -4,11 +4,11 @@ import styled from "@emotion/styled"
 import { colors } from "../utils/styles"
 
 const HeaderContainer = styled.header`
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
 `
 const HeaderImage = styled.img`
-  width: 40%;
+  width: 400px;
   color: ${colors.accent};
   margin-bottom: 1em;
 `
@@ -27,7 +27,7 @@ const Header = () => {
       <div>mail [at] gabrieldavison [dot] me [dot] uk</div>
 
       <div>
-        <Link to="/about">more about me...</Link>
+        <Link to="/about">about me...</Link>
       </div>
     </HeaderContainer>
   )
