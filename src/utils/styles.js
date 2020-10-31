@@ -5,9 +5,9 @@ import emotionNormalize from "emotion-normalize"
 import "fontsource-ibm-plex-mono"
 
 export const colors = {
-  light: "#ECEBF1",
+  light: "#FCF9DE",
   dark: "#000000",
-  accent: "#4024D9",
+  accent: "#1E0B84",
 }
 
 //Global style object

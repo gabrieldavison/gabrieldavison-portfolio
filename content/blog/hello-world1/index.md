@@ -1,7 +1,7 @@
 ---
 title: This is a title for a blog post
 date: "2015-05-01T22:12:03.284Z"
-description: "This is a title for a blog post"
+description: "A blog post about something with a tag line that say something about what it’s about."
 ---
 
 This is my first post on my new fake blog! How exciting!
