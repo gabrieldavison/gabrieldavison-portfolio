@@ -22,9 +22,7 @@ const PostShort = ({ title, slug, date, description }) => {
     <PostWrapper>
       <Link to={slug}>
         <p>{date}</p>
-        <p>
-          <PostHeader>{title}</PostHeader>{" "}
-        </p>
+        <PostHeader>{title}</PostHeader>{" "}
       </Link>
     </PostWrapper>
   )

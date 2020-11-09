@@ -12,14 +12,14 @@ const ProjectHeader = styled.h3`
   margin: 0 0 0.5rem 0;
 `
 
-const ProjectShort = ({ title, source, demo, description }) => {
+const ProjectShort = ({ title, source, demo, html }) => {
   return (
     <ProjectWrapper>
       <ProjectHeader>{title}</ProjectHeader>
       <p>
         <a href={demo}>demo</a> / <a href={source}>source</a>
       </p>
-      <p>{description}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </ProjectWrapper>
   )
 }

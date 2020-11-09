@@ -1,8 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const BlogHeading = styled.h1`
+  margin-bottom: 1em;
+  margin-top: 2em;
+  text-decoration: underline;
+`
+const ArticleContainer = styled.article`
+  p {
+    font-size: 1.3em;
+  }
+`
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -15,13 +26,15 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
+      <ArticleContainer
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <BlogHeading itemProp="headline">
+            {post.frontmatter.title}
+          </BlogHeading>
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -29,8 +42,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer></footer>
-      </article>
+      </ArticleContainer>
       <nav className="blog-post-nav">
         <ul
           style={{

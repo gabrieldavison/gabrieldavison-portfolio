@@ -21,7 +21,7 @@ const ProjectTag = styled.span`
   font-weight: bold;
 `
 
-const ProjectLong = ({ title, source, demo, tags, image, description }) => {
+const ProjectLong = ({ title, source, demo, tags, image, html }) => {
   return (
     <ProjectWrapper>
       <ProjectDetailsWrapper>
@@ -32,13 +32,13 @@ const ProjectLong = ({ title, source, demo, tags, image, description }) => {
           <a href={demo}>demo</a> / <a href={source}>source</a>
         </p>
         <p>
-          {tags.split(",").map(tag => {
-            return <ProjectTag>{tag}</ProjectTag>
+          {tags.split(",").map((tag, i) => {
+            return <ProjectTag key={i}>{tag}</ProjectTag>
           })}
         </p>
       </ProjectDetailsWrapper>
       <Img fluid={image.childImageSharp.fluid} />
-      <p>{description}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </ProjectWrapper>
   )
 }

@@ -19,6 +19,8 @@ const PostHeader = styled.h2`
   :hover {
     text-decoration: underline;
   }
+
+  color: ${colors.dark};
 `
 
 const PostShort = ({ title, slug, date, description }) => {

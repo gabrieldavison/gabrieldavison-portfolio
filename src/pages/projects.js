@@ -16,9 +16,9 @@ const Projects = ({ data, location }) => {
               title={project.frontmatter.title}
               demo={project.frontmatter.demo}
               source={project.frontmatter.source}
-              description={project.frontmatter.description}
               image={project.frontmatter.image}
               tags={project.frontmatter.tags}
+              html={project.html}
             />
           )
         })}
@@ -34,8 +34,8 @@ export const pageQuery = graphql`
     ) {
       nodes {
         id
+        html
         frontmatter {
-          description
           demo
           source
           tags

@@ -9,6 +9,7 @@ const BlogSummary = () => {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "blog" } } }
         sort: { fields: frontmatter___date, order: ASC }
+        limit: 3
       ) {
         nodes {
           id
@@ -27,7 +28,7 @@ const BlogSummary = () => {
   return (
     <Col right>
       <SectionHeader>
-        <Link to="/blog">Blog</Link>
+        <Link to="/blog">Writing</Link>
       </SectionHeader>
       {posts.map(post => {
         return (
@@ -39,7 +40,7 @@ const BlogSummary = () => {
           />
         )
       })}
-      <Link to="/blog">continue to blog...</Link>
+      <Link to="/blog">continue to all writing...</Link>
     </Col>
   )
 }

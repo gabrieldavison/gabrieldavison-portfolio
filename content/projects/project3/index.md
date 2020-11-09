@@ -7,3 +7,5 @@ order: 3
 image: "screenshot.png"
 description: "A simple web app to track your mood and visualize how it changes over time."
 ---
+
+A simple web app to track your mood and visualize how it changes over time.

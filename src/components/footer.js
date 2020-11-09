@@ -46,7 +46,7 @@ const Footer = () => {
 
       <RightCol>
         <p>
-          <a>this website was made with...</a>
+          <a>Website sourcecode...</a>
         </p>
       </RightCol>
     </FooterContainer>

@@ -13,12 +13,12 @@ const ProjectSummary = () => {
       ) {
         nodes {
           id
+          html
           frontmatter {
             demo
             source
             order
             title
-            description
           }
         }
       }
@@ -30,7 +30,7 @@ const ProjectSummary = () => {
   return (
     <Col left>
       <SectionHeader>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects">Recent Projects</Link>
       </SectionHeader>
       {projects.map(project => {
         return (
@@ -39,11 +39,11 @@ const ProjectSummary = () => {
             title={project.frontmatter.title}
             demo={project.frontmatter.demo}
             source={project.frontmatter.source}
-            description={project.frontmatter.description}
+            html={project.html}
           />
         )
       })}
-      <Link to="/projects">continue to projects...</Link>
+      <Link to="/projects">continue to all projects...</Link>
     </Col>
   )
 }

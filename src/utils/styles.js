@@ -47,4 +47,7 @@ export const Col = styled.section`
 `
 export const SectionHeader = styled.h2`
   margin-bottom: 2em;
+  a {
+    color: ${colors.dark};
+  }
 `
