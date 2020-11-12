@@ -27,10 +27,11 @@ const PostShort = ({ title, slug, date, description }) => {
   return (
     <PostWrapper>
       <Link to={slug}>
-        <PostHeader>{title}</PostHeader>
-        <PostDescription>{description}</PostDescription>
-        <p>{date}</p>
+        <PostHeader>{title}</PostHeader>{" "}
       </Link>
+
+      <PostDescription>{description}</PostDescription>
+      <p>{date}</p>
     </PostWrapper>
   )
 }

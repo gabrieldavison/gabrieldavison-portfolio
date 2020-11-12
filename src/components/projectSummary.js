@@ -10,6 +10,7 @@ const ProjectSummary = () => {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "projects" } } }
         sort: { fields: frontmatter___order, order: ASC }
+        limit: 4
       ) {
         nodes {
           id

@@ -5,7 +5,7 @@ import emotionNormalize from "emotion-normalize"
 import "fontsource-ibm-plex-mono"
 
 export const colors = {
-  light: "#FCF9DE",
+  light: "#F1F0F5",
   dark: "#000000",
   accent: "#1E0B84",
 }
@@ -32,21 +32,35 @@ export const GlobalStyle = props => (
       a {
         color: ${colors.accent};
       }
+      body {
+        margin: 0;
+        padding: 0;
+      }
     `}
   />
 )
 
 export const TwoColContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @media only screen and (min-width: 760px) {
+    flex-direction: row;
+  }
+}
+
+
 `
 export const Col = styled.section`
-  width: 50%;
-  padding-right: ${props => (props.left ? "2rem" : "0")};
-  padding-left: ${props => (props.right ? "2rem" : "0")};
+  width: 100%;
+  padding: 0;
+  @media only screen and (min-width: 760px) {
+    width: 50%;
+    padding-right: ${props => (props.left ? "2rem" : "0")};
+    padding-left: ${props => (props.right ? "2rem" : "0")};
+  }
 `
 export const SectionHeader = styled.h2`
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   a {
     color: ${colors.dark};
   }

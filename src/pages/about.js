@@ -1,11 +1,20 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import styled from "@emotion/styled"
+
+const AboutWrapper = styled.div`
+  p {
+    font-size: 1.3em;
+  }
+`
 
 const About = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+      <AboutWrapper
+        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+      ></AboutWrapper>
     </Layout>
   )
 }

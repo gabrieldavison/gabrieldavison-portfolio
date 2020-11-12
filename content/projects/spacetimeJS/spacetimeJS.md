@@ -1,9 +1,9 @@
 ---
-title: Sound Of Life
-demo: "https://gabrieldavison.github.io/sound-of-life/"
-source: "https://github.com/gabrieldavison/sound-of-life"
-tags: "javascript, web audio, html, css, music"
-order: 3
+title: SpacetimeJS
+demo: "https://gabrieldavison.github.io/spacetimeJS/"
+source: "https://github.com/gabrieldavison/spacetimeJS"
+tags: "sequencer, javascript, web audio, music"
+order: 1
 image: "screenshot.png"
 ---
 

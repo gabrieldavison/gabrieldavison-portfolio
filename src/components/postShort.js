@@ -5,6 +5,7 @@ import { colors } from "../utils/styles"
 
 const PostHeader = styled.h3`
   display: inline;
+  font-weight: 400;
 `
 const PostWrapper = styled.div`
   margin-bottom: 2em;

@@ -8,7 +8,7 @@ const BlogSummary = () => {
     {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "blog" } } }
-        sort: { fields: frontmatter___date, order: ASC }
+        sort: { fields: frontmatter___date, order: DESC }
         limit: 3
       ) {
         nodes {

@@ -10,6 +10,7 @@ const ProjectWrapper = styled.div`
 `
 const ProjectHeader = styled.h3`
   margin: 0 0 0.5rem 0;
+  font-weight: 400;
 `
 
 const ProjectShort = ({ title, source, demo, html }) => {
