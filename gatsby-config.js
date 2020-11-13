@@ -1,15 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Gabriel Davison`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Gabriel Davison`,
+      summary: `Designer and developer basedc in London.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `My personal site, collection of recent projects and writing.`,
+    siteUrl: `https://gabrieldavison.com/`,
+    social: {},
   },
   plugins: [
     {
