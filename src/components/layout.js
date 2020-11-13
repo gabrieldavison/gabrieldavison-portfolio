@@ -3,7 +3,8 @@ import Header from "./header"
 import Footer from "./footer"
 import { GlobalStyle } from "../utils/styles"
 import styled from "@emotion/styled"
-import P5Wrapper from "react-p5-wrapper"
+import { loadableP5 as P5Wrapper } from "../utils/loadable"
+
 import Sketch from "../components/sketch"
 
 const SiteContainer = styled.div`

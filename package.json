@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@loadable/component": "^5.14.1",
     "emotion-normalize": "^10.1.0",
     "fontsource-ibm-plex-mono": "^3.0.9",
     "gatsby": "^2.24.85",

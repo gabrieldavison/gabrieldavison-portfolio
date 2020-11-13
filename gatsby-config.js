@@ -3,7 +3,7 @@ module.exports = {
     title: `Gabriel Davison`,
     author: {
       name: `Gabriel Davison`,
-      summary: `Designer and developer basedc in London.`,
+      summary: `Designer and developer based in London.`,
     },
     description: `My personal site, collection of recent projects and writing.`,
     siteUrl: `https://gabrieldavison.com/`,
@@ -72,13 +72,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Gabriel Davison`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/site-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
