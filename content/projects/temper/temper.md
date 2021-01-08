@@ -1,7 +1,7 @@
 ---
 title: Temper
-demo: "https://wave-slicer.netlify.app/"
-source: "https://github.com/jaqarrick/wave-slicer"
+demo: "https://temper-client.netlify.app/"
+source: "https://github.com/gabrieldavison/temper-client"
 tags: "javascript,react,feathers,mongoDB"
 order: 4
 image: "screenshot.png"
