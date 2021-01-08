@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 
 const ProjectWrapper = styled.div`
   margin-bottom: 2em;
-
+  /* text-align: justify; */
   p {
     margin: 0;
   }

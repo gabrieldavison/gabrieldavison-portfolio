@@ -6,6 +6,7 @@ import { colors } from "../utils/styles"
 const HeaderContainer = styled.header`
   padding-top: 3rem;
   margin-bottom: 3rem;
+  /* text-align: center; */
 `
 const HeaderImage = styled.img`
   width: 80%;

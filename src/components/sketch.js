@@ -20,9 +20,10 @@ export default function Sketch(p5) {
   let fr = 15
 
   p5.setup = () => {
-    canvas = p5.createCanvas(p5.windowWidth - 10, p5.windowHeight - 10)
-    canvas.position(0, 0)
-    canvas.style("z-index", "-2")
+    canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
+    canvas.id("background-canvas")
+    // canvas.position(0, 0)
+    // canvas.style("z-index", "-2")
     p5.background(bgColor)
     p5.fill(fillColor)
     p5.textSize(lineWidth)
@@ -31,7 +32,7 @@ export default function Sketch(p5) {
   }
 
   p5.draw = () => {
-    p5.resizeCanvas(p5.windowWidth - 100, p5.windowHeight - 100)
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight)
     currentHorizontal = 0
     currentVertical = 0
     p5.background(bgColor)
@@ -40,11 +41,13 @@ export default function Sketch(p5) {
   }
 
   p5.windowResized = () => {
-    p5.resizeCanvas(p5.windowWidth - 100, p5.windowHeight - 100)
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight)
   }
 
   p5.mousePressed = () => {
-    p5.loop()
+    if (p5.mouseButton === p5.LEFT) {
+      p5.loop()
+    }
   }
 
   p5.mouseReleased = () => {

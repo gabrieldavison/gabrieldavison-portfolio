@@ -2,9 +2,9 @@
 title: SpacetimeJS
 demo: "https://gabrieldavison.github.io/spacetimeJS/"
 source: "https://github.com/gabrieldavison/spacetimeJS"
-tags: "sequencer, javascript, web audio, music"
-order: 1
+tags: "sequencer,javascript,web audio,music"
+order: 3
 image: "screenshot.png"
 ---
 
-A musical instrument that generates sounds using [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Generative melodies and synthesized sounds.
+A command based musical sequencer that can be played using a computer keyboard. It uses an instance of [Engine](https://github.com/gabrieldavison/engine) to generate sound. It's inspired by the [spacetime study](https://monome.org/docs/norns/study-3/) for [monome norns](https://monome.org/docs/norns/).

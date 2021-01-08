@@ -13,19 +13,32 @@ const SiteContainer = styled.div`
   min-height: calc(100vh - 85px);
   padding: 0 1rem;
 `
+const BackgroundWrapper = styled.div`
+  #background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    width: 100vh;
+    height: 100vw;
+  }
+`
+
 const ContentContainer = styled.main``
 
 const Layout = ({ children, location }) => {
   return (
     <>
       <GlobalStyle />
-      <P5Wrapper sketch={Sketch} />
 
       <SiteContainer location={location}>
         <Header />
         {/* {location.pathname === "/" ? null : <Nav location={location} />} */}
         <ContentContainer>{children}</ContentContainer>
       </SiteContainer>
+      <BackgroundWrapper>
+        <P5Wrapper sketch={Sketch} />
+      </BackgroundWrapper>
       <Footer />
     </>
   )

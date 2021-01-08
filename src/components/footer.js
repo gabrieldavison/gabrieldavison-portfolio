@@ -17,7 +17,7 @@ const Footer = () => {
     <FooterContainer>
       <p>
         <a href="https://github.com/gabrieldavison/gabrieldavison-portfolio">
-          Website sourcecode...
+          sourcecode...
         </a>
       </p>
     </FooterContainer>
