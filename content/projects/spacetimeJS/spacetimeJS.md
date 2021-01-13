@@ -3,7 +3,7 @@ title: SpacetimeJS
 demo: "https://gabrieldavison.github.io/spacetimeJS/"
 source: "https://github.com/gabrieldavison/spacetimeJS"
 tags: "sequencer,javascript,web audio,music"
-order: 3
+order: 4
 image: "screenshot.png"
 ---
 

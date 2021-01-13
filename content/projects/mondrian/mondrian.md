@@ -3,7 +3,7 @@ title: Mondrian
 demo: "https://mondrian-client.netlify.app/"
 source: "https://github.com/gabrieldavison/mondrian-client"
 tags: "javascript,react,node.js,express,postgres"
-order: 1
+order: 2
 image: "screenshot.png"
 ---
 

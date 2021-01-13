@@ -3,7 +3,7 @@ title: Sound Of Life
 demo: "https://gabrieldavison.github.io/sound-of-life/"
 source: "https://github.com/gabrieldavison/sound-of-life"
 tags: "javascript, web audio, html, css, music"
-order: 6
+order: 7
 image: "screenshot.png"
 ---
 
