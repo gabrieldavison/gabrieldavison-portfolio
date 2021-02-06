@@ -1,10 +1,10 @@
 ---
-title: Mondrian
-demo: "https://mondrian-client.netlify.app/"
-source: "https://github.com/gabrieldavison/mondrian-client"
-tags: "javascript,react,node.js,express,postgres"
+title: utxt
+demo: "https://utxt.page/"
+source: "https://github.com/gabrieldavison/utxt-client"
+tags: "javascript,react,node.js,express,SQLite"
 order: 2
 image: "screenshot.png"
 ---
 
-A web application for building simple web pages out of text boxes. It uses React for the frontend and Express/Postgres for the backend.
+A web application for building simple web pages out of text boxes. It uses React for the frontend and Express/SQLite for the backend.
