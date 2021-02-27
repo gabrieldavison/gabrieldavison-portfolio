@@ -1,18 +1,57 @@
 import React from "react"
-import Layout from "../components/layout"
-import BlogSummary from "../components/blogSummary"
-import ProjectSummary from "../components/projectSummary"
-import { TwoColContainer } from "../utils/styles"
+import { graphql } from "gatsby"
 
-const Index = ({ location }) => {
+import Layout from "../components/layout"
+import ProjectLong from "../components/projectLong"
+
+const Projects = ({ data, location }) => {
+  const projects = data.allMarkdownRemark.nodes
   return (
     <Layout location={location}>
-      <TwoColContainer>
-        <ProjectSummary />
-        <BlogSummary />
-      </TwoColContainer>
+      <div>
+        {projects.map(project => {
+          return (
+            <ProjectLong
+              key={project.id}
+              title={project.frontmatter.title}
+              demo={project.frontmatter.demo}
+              source={project.frontmatter.source}
+              image={project.frontmatter.image}
+              tags={project.frontmatter.tags}
+              html={project.html}
+            />
+          )
+        })}
+      </div>
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { fields: { collection: { eq: "projects" } } }
+      sort: { fields: frontmatter___order, order: ASC }
+    ) {
+      nodes {
+        id
+        html
+        frontmatter {
+          demo
+          source
+          tags
+          title
+          order
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
-export default Index
+export default Projects
