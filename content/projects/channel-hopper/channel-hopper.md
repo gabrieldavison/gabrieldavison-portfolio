@@ -2,7 +2,7 @@
 title: ChannelHopper
 demo: "https://channelhopper.ch1p.net/"
 source: "https://github.com/gabrieldavison/channel-hopper"
-tags: "javascript,preact,livecoding,hydra,"
+tags: "javascript,preact,livecoding,hydra,UX"
 order: 1
 image: "screenshot.png"
 ---
