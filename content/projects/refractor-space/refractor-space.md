@@ -3,7 +3,7 @@ title: Refractor Space
 demo: "https://refractorspace.net/"
 source: "https://github.com/gabrieldavison/refractor-space"
 tags: "javascript,web audio,music,hydra,p5.js,generative"
-order: 1
+order: 2
 image: "screenshot.png"
 ---
 

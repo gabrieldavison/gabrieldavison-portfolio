@@ -3,7 +3,7 @@ title: utxt
 demo: "https://utxt.page/"
 source: "https://github.com/gabrieldavison/utxt-client"
 tags: "javascript,react,node.js,express,SQLite"
-order: 2
+order: 3
 image: "screenshot.png"
 ---
 

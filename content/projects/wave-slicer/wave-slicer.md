@@ -3,7 +3,7 @@ title: Wave Slicer
 demo: "https://wave-slicer.netlify.app/"
 source: "https://github.com/jaqarrick/wave-slicer"
 tags: "javascript,typescript,react,web audio"
-order: 3
+order: 4
 image: "screenshot.png"
 ---
 
